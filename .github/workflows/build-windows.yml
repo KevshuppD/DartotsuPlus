@@ -35,10 +35,9 @@ jobs:
     timeout-minutes: 60
     env:
       CL: /D_SILENCE_EXPERIMENTAL_COROUTINE_DEPRECATION_WARNINGS
+      HAS_PFX: ${{ secrets.PFX_FILE != '' }}
     outputs:
       zip_link: ${{ steps.gdriveUpload.outputs.web-content-link }}
-    env:
-      HAS_PFX: ${{ secrets.PFX_FILE != '' }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
