@@ -20,7 +20,7 @@ class AppFork {
   });
 }
 
-const _repo = 'aayush2622/Dartotsu';
+const _repo = 'KevshuppD/DartotsuPlus';
 
 Future<List<AppFork>> loadForks() async {
   final forks = <AppFork>[];

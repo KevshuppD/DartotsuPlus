@@ -54,7 +54,7 @@ List<Setting> aboutSettings(BuildContext context) => [
     description: getString.gitHubDesc,
     icon: Icons.code_rounded,
     trailingIcon: Icons.open_in_new_rounded,
-    onClick: () => openLinkInBrowser('https://github.com/aayush2622/Dartotsu'),
+    onClick: () => openLinkInBrowser('https://github.com/KevshuppD/DartotsuPlus'),
   ),
   Setting.normal(
     name: getString.discord,

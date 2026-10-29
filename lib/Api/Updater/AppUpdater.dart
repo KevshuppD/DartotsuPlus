@@ -46,8 +46,8 @@ class UpdateInfo {
 }
 
 class AppUpdater extends AppController {
-  static const _mainRepo = 'aayush2622/Dartotsu';
-  static const _alphaRepo = 'grayankit/Dartotsu-Downloader';
+  static const _mainRepo = 'KevshuppD/DartotsuPlus';
+  static const _alphaRepo = _mainRepo;
 
   NetworkManager get _network => find();
   bool get _checkForUpdates => PrefName.checkForUpdates.value;

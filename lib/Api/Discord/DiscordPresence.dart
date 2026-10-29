@@ -2,7 +2,7 @@ import '../../Core/Services/Model/Media.dart';
 
 const _logo =
     'https://cdn.discordapp.com/emojis/1305525420938100787.gif?size=128&animated=true&name=dartotsu';
-const _repo = 'https://github.com/aayush2622/Dartotsu';
+const _repo = 'https://github.com/KevshuppD/DartotsuPlus';
 
 class PresenceStyle {
   final bool images;

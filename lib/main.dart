@@ -203,6 +203,8 @@ Future<void> init(List<String> args) async {
       WindowManager.instance.ensureInitialized(),
   ]);
 
+  unawaited(_preferAniyomi());
+
   _stage = 'media kit';
   unawaited(applyRefreshRate());
   try {
@@ -234,6 +236,20 @@ void applySystemBarStyle({required bool isDark}) {
       systemNavigationBarContrastEnforced: false,
     ),
   );
+}
+
+/// Makes Aniyomi the default anime and manga extension manager once; a manager
+/// picked later by the user is kept.
+Future<void> _preferAniyomi() async {
+  if (PrefName.aniyomiDefaultApplied.value) return;
+  final id = Platform.isAndroid ? 'aniyomi' : 'aniyomi_desktop';
+  final manager = find<ExtensionManager>();
+  if (!manager.managers.any((e) => e.id == id)) return;
+  PrefName.aniyomiDefaultApplied.value = true;
+  for (final type in [ItemType.anime, ItemType.manga]) {
+    final error = await manager.switchManager(type, id);
+    if (error != null) logger('Aniyomi default for ${type.name}: $error');
+  }
 }
 
 /// Work that can safely run after the first frame.

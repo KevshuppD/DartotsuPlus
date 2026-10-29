@@ -173,7 +173,7 @@ class Media {
       userProgress: kept.contains('userProgress')
           ? values['userProgress']
           : null,
-      shareLink: 'https://github.com/aayush2622/Dartotsu',
+      shareLink: 'https://github.com/KevshuppD/DartotsuPlus',
     );
   }
 

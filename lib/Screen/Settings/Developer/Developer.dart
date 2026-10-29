@@ -32,7 +32,7 @@ class Developer {
   );
 }
 
-const _repo = 'aayush2622/Dartotsu';
+const _repo = 'KevshuppD/DartotsuPlus';
 
 const _excludedContributorIds = [
   '1607653',
